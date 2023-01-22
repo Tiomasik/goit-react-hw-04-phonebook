@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Form } from 'formik';
 
-export const StyleForm = styled.form `
+export const StyleForm = styled(Form) `
     margin-left: auto;
     margin-right: auto;
     width:400px;
@@ -35,4 +36,13 @@ export const StyleForm = styled.form `
             color: white;
         }
     }
+
+    div {
+        color: red;
+        margin-bottom: 20px;
+        width: 360px;
+        text-align: center;
+    }
 `
+        
+     
