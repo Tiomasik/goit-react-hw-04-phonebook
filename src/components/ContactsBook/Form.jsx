@@ -11,8 +11,8 @@ const initialValues = {
 }
 
 const schema = yup.object().shape({
-  name: yup.string().required().matches(/(^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$)/),
-  number: yup.number().required().matches(/(\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9})/),
+  name: yup.string().matches(/(^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$)/).required(),
+  number: yup.number().required().integer(),
 });
 
 const FormErrorName = ({ name }) => {
